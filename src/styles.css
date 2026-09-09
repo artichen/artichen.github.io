@@ -1,0 +1,89 @@
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #171717;
+  background: #fff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #171717;
+  --muted: #62656b;
+  --blue: #0000ee;
+  --line: #e1e3e7;
+  --surface: #f6f7f9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 1.083333rem;
+  line-height: 1.72;
+}
+/* 13pt = 17.333px；用 rem 保留浏览器字体缩放能力。 */
+button,
+input {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+a {
+  color: var(--blue);
+  text-underline-offset: 4px;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 5px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+}
+button,
+input,
+p,
+a,
+li,
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+::selection {
+  background: #dce5ff;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
