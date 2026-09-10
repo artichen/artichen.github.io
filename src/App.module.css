@@ -628,6 +628,34 @@
   max-width: 740px;
   margin: 0;
 }
+.miscGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 18px;
+  margin-top: 24px;
+  max-width: 740px;
+}
+
+.miscImage {
+  margin: 0;
+  min-width: 0;
+}
+
+.miscImage img {
+  display: block;
+  width: 100%;
+  height: max(280px, 50%);
+  object-fit: contain;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.miscImage figcaption {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
 .miscFootnote {
   padding: 25px 0;
   color: var(--muted);
@@ -791,4 +819,12 @@
   .blogPost h2 {
     font-size: 23px;
   }
+
+  .miscGallery {
+  grid-template-columns: minmax(0, 1fr);
 }
+
+.miscImage img {
+  width: 100%;
+  height: auto;
+}}

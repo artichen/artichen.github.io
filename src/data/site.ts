@@ -39,7 +39,15 @@ export type SiteData = {
   skills: { label: string; items: string[] }[];
   projects: Project[];
   posts: Post[];
-  miscellany: { title: string; description: string }[];
+ miscellany: {
+  title: string;
+  description: string;
+  images?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  }[];
+}[];
   cv: { path?: string; filename: string; isSample: boolean };
   isDraft: boolean;
 };
@@ -55,11 +63,11 @@ export const siteData: SiteData = {
     institution: "James Cook University, Singapore",
     location: "Singapore",
     bio: [
-      "I am a commerce student with a background in mathematics and physics, interested in the intersection aera of machine learning, statistics, and finance.",
-      "My current research and learning interests include retrieval-augmented generation, AI agents, and quantitative research. I enjoy connecting mathematical ideas with practical programming and financial questions.",
+      "I am a commerce student with a background in mathematics and astronomy, interested in the intersection aera of machine learning, statistics, and finance.",
+      "My current research and learning interests include retrieval-augmented generation, AI agents, and quant finance. I enjoy connecting mathematical ideas with practical programming and financial questions.",
     ],
     // 将照片放入 public/images/portrait.jpg 后，填写 images/portrait.jpg。
-    photo: "",
+    photo: "images/portrait.jpg",
     photoAlt: "Portrait of Yuhan Chen",
     // 填写真实完整链接后，首页与页脚会同步显示可点击的账号链接。
     github: "",
@@ -154,23 +162,32 @@ export const siteData: SiteData = {
       ],
     },
   ],
-  miscellany: [
-    {
-      title: "Mathematics behind the models",
-      description:
-        "Probability, inference, and numerical methods: the ideas I want to understand beyond an implementation.",
-    },
-    {
-      title: "From physics to data",
-      description:
-        "An interest in how modelling, approximation, and measurement connect questions across disciplines.",
-    },
-    {
-      title: "Learning through explanation",
-      description:
-        "Working through an idea, implementing a small example, and writing the explanation in my own words.",
-    },
-  ],
+miscellany: [
+  {
+    title: "Mathematics behind the models",
+    description:
+      "Probability, inference, and numerical methods: the ideas I want to understand beyond an implementation.",
+    images: [
+      {
+        src: "images/miscellany/lognormal-notes.jpg",
+        alt: "Handwritten notes deriving the mean and variance of a lognormal distribution from a normal variable.",
+        caption:
+          "Personal study notes: deriving the moments of a lognormal distribution.",
+      },
+    ],
+  },
+  {
+    title: "From physics to data",
+    description:
+      "An interest in how modelling, approximation, and measurement connect questions across disciplines.",
+  },
+  {
+    title: "Learning through explanation",
+    description:
+      "Working through an idea, implementing a small example, and writing the explanation in my own words.",
+  },
+],
+
   cv: {
     path: "files/yuhan-chen-cv-sample.pdf",
     filename: "Yuhan-Chen-CV-Sample.pdf",
