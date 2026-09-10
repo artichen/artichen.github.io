@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -16,30 +17,46 @@ concurrency:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout source
+      - name: Checkout source code
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
+
       - name: Install dependencies
         run: npm ci
-      - name: Check core behavior
-        run: npm test
-      - name: Build static site
+
+      - name: Build the Vite website
         run: npm run build
-      - name: Configure Pages
+
+      - name: Verify the Vite build output
+        run: |
+          test -f dist/index.html
+          test -d dist/assets
+          if grep -q "/src/main.tsx" dist/index.html; then
+            echo "Error: dist/index.html still points to the TypeScript source."
+            exit 1
+          fi
+          echo "Verified: dist/index.html contains compiled production assets."
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
-      - name: Upload built site
+
+      - name: Upload the dist directory
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
-      - name: Deploy
+          path: ./dist
+
+      - name: Deploy the website
         id: deployment
         uses: actions/deploy-pages@v4
