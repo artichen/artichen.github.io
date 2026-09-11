@@ -70,8 +70,8 @@ export const siteData: SiteData = {
     photo: "images/portrait.jpg",
     photoAlt: "Portrait of Yuhan Chen",
     // 填写真实完整链接后，首页与页脚会同步显示可点击的账号链接。
-    github: "",
-    linkedin: "",
+    github: "https://github.com/artichen",
+    linkedin: "https://www.linkedin.com/in/yuhan-chen-bbb7173b0/",
     email: "",
   },
   interests: [
@@ -108,10 +108,7 @@ export const siteData: SiteData = {
       label: "Data & modelling",
       items: ["NumPy", "Pandas", "TensorFlow / Keras"],
     },
-    {
-      label: "Foundations",
-      items: ["Calculus", "Linear algebra", "Probability & statistics"],
-    },
+    
   ],
   // 示例条目只演示展示结构；请用可验证的项目替换后再正式公开。
   projects: [
@@ -164,28 +161,42 @@ export const siteData: SiteData = {
   ],
 miscellany: [
   {
-    title: "Mathematics behind the models",
+    title: " Chinese Cuisine",
     description:
-      "Probability, inference, and numerical methods: the ideas I want to understand beyond an implementation.",
+      "",
+    
     images: [
       {
         src: "images/miscellany/lognormal-notes.jpg",
-        alt: "Handwritten notes deriving the mean and variance of a lognormal distribution from a normal variable.",
-        caption:
-          "Personal study notes: deriving the moments of a lognormal distribution.",
+        alt:  "A dish made by me",
+        caption:"     Chinese Braised Beef Brisket     ",
+          
+      },
+      {
+        src: "images/miscellany/food-02.png",
+        alt: "A homemade dish prepared during my studies.",
+        caption: "Salt-Baked Prawns",
       },
     ],
   },
   {
-    title: "From physics to data",
+    title: "Photos taken during my studies",
     description:
-      "An interest in how modelling, approximation, and measurement connect questions across disciplines.",
+      "",
+    images: [
+      {
+        src: "images/miscellany/street-01.jpg",
+        alt:  "On the street in Singapore",
+        caption:" A corner on the Street ",
+          
+      },
+      {
+        src: "images/miscellany/me-01.jpg",
+        alt: "A photo of me in front of CBD inSingapore",
+        caption: "A photo of me in front of CBD in Singapore",
+      },]
   },
-  {
-    title: "Learning through explanation",
-    description:
-      "Working through an idea, implementing a small example, and writing the explanation in my own words.",
-  },
+  
 ],
 
   cv: {

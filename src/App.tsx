@@ -11,8 +11,9 @@ import {
 import Home from "./pages/Home";
 import CV from "./pages/CV";
 import Blog from "./pages/Blog";
-import Miscellany from "./pages/Miscellany";
+import Miscellany from "./pages/Miscellany"
 import s from "./App.module.css";
+
 
 export default function App() {
   const route = useHashRoute();
@@ -206,8 +207,7 @@ export default function App() {
       </footer>
       {data?.isDraft && (
         <div className={s.draftNote}>
-          Profile draft · Sample project and blog entries are labelled. Account
-          links are not yet added.
+          
         </div>
       )}
       {showTop && (

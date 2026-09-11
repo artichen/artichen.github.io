@@ -1,3 +1,4 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Component, useState } from "react";
 import type { ErrorInfo, ReactNode } from "react";
 import type { SiteData } from "../data/site";
@@ -36,6 +37,8 @@ export function SocialLinks({ profile }: { profile: SiteData["profile"] }) {
       {(["github", "linkedin"] as const).map((key) => {
         const url = safeExternalUrl(profile[key]);
         const label = key === "github" ? "GitHub" : "LinkedIn";
+        const Icon = key === "github" ? FaGithub : FaLinkedin;
+
         return url ? (
           <a
             key={key}
@@ -44,8 +47,13 @@ export function SocialLinks({ profile }: { profile: SiteData["profile"] }) {
             rel="noopener noreferrer"
             aria-label={`${label} profile (opens in a new tab)`}
           >
-            {label}
-            <Arrow />
+            <Icon
+              className={`${s.socialIcon} ${
+                key === "github" ? s.githubIcon : s.linkedinIcon
+              }`}
+              aria-hidden="true"
+            />
+            <span>{label}</span>
           </a>
         ) : (
           <span
@@ -54,7 +62,7 @@ export function SocialLinks({ profile }: { profile: SiteData["profile"] }) {
             title="Profile link has not been added yet"
           >
             {label}
-            <span className={s.pendingLabel}>not added</span>
+            <span className={s.pendingLabel}></span>
           </span>
         );
       })}

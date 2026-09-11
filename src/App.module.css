@@ -177,12 +177,24 @@
 .socialLinks a {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 7px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.socialLinks a:hover {
+  text-decoration: underline;
+}
+.socialIcon {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  color: #7d8085;
 }
 .pending {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
   color: var(--muted);
 }
 .pendingLabel {
@@ -828,3 +840,10 @@
   width: 100%;
   height: auto;
 }}
+.githubIcon {
+  color: #181717;
+}
+
+.linkedinIcon {
+  color: #0a66c2;
+}
