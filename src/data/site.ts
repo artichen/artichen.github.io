@@ -115,7 +115,7 @@ export const siteData: SiteData = {
     {
       id: "financial-rag",
       title: "Retrieval over financial documents",
-      kind: "Example project",
+      kind: "",
       summary:
         "A possible project connecting document retrieval, language models, and financial analysis.",
       tags: ["Machine learning", "RAG", "Python"],
@@ -125,7 +125,7 @@ export const siteData: SiteData = {
     {
       id: "risk-analysis",
       title: "Understanding bank interest-rate risk",
-      kind: "Example project",
+      kind: "",
       summary:
         "A possible case study connecting financial statements, interest-rate exposure, and quantitative analysis.",
       tags: ["Finance", "Statistics", "Python"],

@@ -60,8 +60,7 @@ export default function Home({ data }: { data: SiteData }) {
         </div>
         {data.isDraft && (
           <p className={s.sectionIntro}>
-            Illustrative entries. Verified projects and supporting work will be
-            added here.
+            
           </p>
         )}
         {data.projects.length ? (

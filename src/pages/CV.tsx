@@ -134,8 +134,7 @@ export default function CV({ data }: { data: SiteData }) {
           <span>03</span>
         </div>
         <p>
-          Machine learning systems, AI agent development, quantitative research,
-          and quantitative development.
+          AI for science, AI for investment, AI agent development, quantitative finance
         </p>
         <p className={s.sectionIntro}>
           Project experience and supporting repositories can be found on the{" "}
