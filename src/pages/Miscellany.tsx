@@ -9,7 +9,7 @@ export default function Miscellany({ data }: { data: SiteData }) {
       <PageHeading
         eyebrow="A LITTLE MORE CONTEXT"
         title="Miscellany"
-        description="Intellectual interests and the way I approach learning."
+        description="My cooking hobbies, photos taken during spare time"
       />
 
       {data.miscellany.length ? (
@@ -22,34 +22,38 @@ export default function Miscellany({ data }: { data: SiteData }) {
               <p>{item.description}</p>
 
               {item.images?.length ? (
-                <div className={s.miscGallery}>
-                  {item.images.map((image) => {
-                    const imagePath = localAsset(image.src);
+  <details className={s.details}>
+    <summary>View photos ({item.images.length})</summary>
 
-                    if (!imagePath) {
-                      return null;
-                    }
+    <div className={s.miscGallery}>
+      {item.images.map((image) => {
+        const imagePath = localAsset(image.src);
 
-                    return (
-                      <figure
-                        className={s.miscImage}
-                        key={`${image.src}-${image.alt}`}
-                      >
-                        <img
-                          src={imagePath}
-                          alt={image.alt}
-                          loading="lazy"
-                          decoding="async"
-                        />
+        if (!imagePath) {
+          return null;
+        }
 
-                        {image.caption ? (
-                          <figcaption>{image.caption}</figcaption>
-                        ) : null}
-                      </figure>
-                    );
-                  })}
-                </div>
-              ) : null}
+        return (
+          <figure
+            className={s.miscImage}
+            key={`${image.src}-${image.alt}`}
+          >
+            <img
+              src={imagePath}
+              alt={image.alt}
+              loading="lazy"
+              decoding="async"
+            />
+
+            {image.caption ? (
+              <figcaption>{image.caption}</figcaption>
+            ) : null}
+          </figure>
+        );
+      })}
+    </div>
+  </details>
+) : null}
             </div>
           </article>
         ))

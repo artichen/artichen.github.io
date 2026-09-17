@@ -64,7 +64,7 @@ export const siteData: SiteData = {
     location: "Singapore",
     bio: [
       "I am a commerce student with a background in mathematics and astronomy, interested in the intersection aera of machine learning, statistics, and finance.",
-      "My current research and learning interests include retrieval-augmented generation, AI agents, and quant finance. I enjoy connecting mathematical ideas with practical programming and financial questions.",
+      "My current research and learning interests include fine-tuning of Large Language Models, AI agents, and quantitative finance. I enjoy connecting mathematical ideas with practical programming and financial questions.",
     ],
     // 将照片放入 public/images/portrait.jpg 后，填写 images/portrait.jpg。
     photo: "images/portrait.jpg",
@@ -79,27 +79,24 @@ export const siteData: SiteData = {
       title: "Machine learning & AI systems",
       description:
         "Retrieval-augmented generation, model adaptation, and reliable agent workflows.",
-      keywords: ["RAG", "Fine-tuning", "AI agents"],
+      keywords: [ "Fine-tuning", "AI agents"],
     },
     {
       title: "Statistics & mathematical methods",
       description:
         "Probability, statistical inference, and the mathematical foundations of data-driven models.",
-      keywords: ["Probability", "Inference", "Numerical methods"],
+      keywords: [ "Inference", "Numerical methods"],
     },
-    {
-      title: "Quantitative finance",
-      description:
-        "Financial modelling, market data, and the connection between risk measurement and investment decisions.",
-      keywords: ["Risk modelling", "Financial data", "Quant research"],
-    },
+    
+      
+    
   ],
   education: [
     {
       institution: "James Cook University, Singapore",
-      qualification: "Bachelor of Commerce · Economics",
-      detail:
-        "Studies spanning economics, finance, statistics, and programming. Dates and verified academic results to be added.",
+      qualification: "Bachelor of Commerce · Banking and Finance",
+      
+        
     },
   ],
   skills: [
@@ -114,14 +111,22 @@ export const siteData: SiteData = {
   projects: [
     {
       id: "financial-rag",
-      title: "Retrieval over financial documents",
-      kind: "",
+      title: " Hydrodynamics Simulation: Shock Tubes and Blast Waves",
+      kind: "course project",
       summary:
-        "A possible project connecting document retrieval, language models, and financial analysis.",
-      tags: ["Machine learning", "RAG", "Python"],
-      details:
-        "Suggested evidence for a future project: a public repository, a small evaluation dataset, retrieval-quality measurements, and an explanation of limitations. This entry illustrates the portfolio format; it is not a claim of completed work.",
-    },
+          "Python-based simulations of one-dimensional fluid dynamics, exploring shock propagation through Sod shock-tube and blast-wave problems.",
+    tags: [
+      "Scientific computing",
+        "Numerical methods",
+          "Hydrodynamics",
+    
+        
+  ],
+  url:"https://github.com/artichen/astrodynamics",
+  details:
+    "An undergraduate computational physics project exploring numerical methods for one-dimensional hydrodynamics. The notebook contains implementations for Sod shock-tube and blast-wave problems . The project connects physical modelling with numerical implementation and highlights the importance of stability, boundary conditions, and realistic solutions in physics science. The original coursework is still being revisited to address implementation issues and improve reproducibility and validation.",
+  
+},
     {
       id: "risk-analysis",
       title: "Understanding bank interest-rate risk",

@@ -46,7 +46,7 @@ export default function Blog({ data }: { data: SiteData }) {
       <div className={s.resultCount} role="status">
         {posts.length} {posts.length === 1 ? "note" : "notes"}
         {query.trim() ? ` matching “${query.trim()}”` : ""}
-        {data.isDraft ? " · Sample content" : ""}
+        {data.isDraft ? " " : ""}
       </div>
       {!data.posts.length ? (
         <EmptyState title="No notes published yet">
@@ -64,7 +64,7 @@ export default function Blog({ data }: { data: SiteData }) {
           <article className={s.blogPost} key={post.id}>
             <p className={s.eyebrow}>
               {post.category || "Notes"}
-              {data.isDraft ? " / SAMPLE NOTE" : ""}
+              {data.isDraft ? " " : ""}
             </p>
             <h2>{post.title || "Untitled note"}</h2>
             {post.summary && <p>{post.summary}</p>}
