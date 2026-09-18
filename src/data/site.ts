@@ -205,9 +205,9 @@ miscellany: [
 ],
 
   cv: {
-    path: "files/yuhan-chen-cv-sample.pdf",
-    filename: "Yuhan-Chen-CV-Sample.pdf",
-    isSample: true,
+    path: "files/yuhan-chen-cv.pdf",
+    filename: "Yuhan-Chen-CV.pdf",
+    isSample: false,
   },
 };
 

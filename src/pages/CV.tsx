@@ -93,6 +93,27 @@ export default function CV({ data }: { data: SiteData }) {
           </button>
         </div>
       )}
+      {path && (
+  <div className={s.cvPreview}>
+    <p className={s.cvPreviewHint}>
+      If the preview is unavailable,{" "}
+      <a
+        href={path}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        open the PDF in a new tab
+      </a>
+      {" "}or use the download button above.
+    </p>
+
+    <iframe
+      src={path}
+      title={`${data.profile.name} — Curriculum vitae`}
+      className={s.cvPdfFrame}
+    />
+  </div>
+)}
       <section className={s.section}>
         <div className={s.sectionHeading}>
           <h2>Education</h2>
