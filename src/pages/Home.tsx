@@ -1,6 +1,6 @@
 import type { SiteData } from "../data/site";
 import { Arrow, EmptyState, Portrait, SocialLinks } from "../components/Shared";
-import { safeExternalUrl } from "../utils";
+import { localAsset, safeExternalUrl } from "../utils";
 import s from "../App.module.css";
 
 export default function Home({ data }: { data: SiteData }) {
@@ -85,6 +85,17 @@ export default function Home({ data }: { data: SiteData }) {
                     {project.details ||
                       "Further details are not yet available."}
                   </p>
+                  {project.report && (
+  <p>
+    <a
+      href={localAsset(project.report)}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Read report <Arrow />
+    </a>
+  </p>
+)}
                   {safeExternalUrl(project.url) && (
                     <a
                       href={safeExternalUrl(project.url)}

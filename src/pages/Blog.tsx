@@ -62,25 +62,28 @@ export default function Blog({ data }: { data: SiteData }) {
       ) : (
         posts.map((post) => (
           <article className={s.blogPost} key={post.id}>
-            <p className={s.eyebrow}>
-              {post.category || "Notes"}
-              {data.isDraft ? " " : ""}
-            </p>
-            <h2>{post.title || "Untitled note"}</h2>
-            {post.summary && <p>{post.summary}</p>}
-            <details className={s.details}>
-              <summary>Read note</summary>
-              <div className={s.postBody}>
-                {post.paragraphs?.length ? (
-                  post.paragraphs.map((paragraph, index) => (
-                    <p key={index}>{paragraph}</p>
-                  ))
-                ) : (
-                  <p>This note has no body content yet.</p>
-                )}
-              </div>
-            </details>
-          </article>
+  <h2>
+    <button
+      type="button"
+      onClick={() => window.alert("still under construction")}
+      style={{
+        background: "none",
+        border: 0,
+        padding: 0,
+        font: "inherit",
+        color: "inherit",
+        textAlign: "left",
+        cursor: "pointer",
+      }}
+    >
+      {post.title}
+    </button>
+  </h2>
+
+  <p>
+    <small>{post.summary}</small>
+  </p>
+</article>
         ))
       )}
     </>

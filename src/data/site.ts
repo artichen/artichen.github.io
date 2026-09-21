@@ -12,6 +12,7 @@ export type Project = {
   tags?: string[];
   details?: string;
   url?: string;
+  report?: string;
 };
 export type Post = {
   id: string;
@@ -128,42 +129,24 @@ export const siteData: SiteData = {
   
 },
     {
-      id: "risk-analysis",
-      title: "Understanding bank interest-rate risk",
-      kind: "",
-      summary:
-        "A possible case study connecting financial statements, interest-rate exposure, and quantitative analysis.",
-      tags: ["Finance", "Statistics", "Python"],
-      details:
-        "Suggested evidence for a future case study: source statements, a reproducible notebook, clearly stated assumptions, and a concise discussion of findings. This entry is a placeholder for verified coursework or independent work.",
-    },
+  id: "astroparticlephysics",
+  title: "Astroparticle Physics",
+  kind: "Course project",
+  summary: "Project report and source code.",
+  details: "Report and code for my astroparticle physics project.",
+  report: "files/astroparticle_project.pdf",
+  url: "https://github.com/artichen/Astroparticle-Project-AMS-02-model-fitting",
+},
   ],
-  posts: [
-    {
-      id: "retrieval-evaluation",
-      title: "What would make a financial RAG system useful?",
-      category: "Machine learning",
-      summary:
-        "A starting outline for evaluating retrieval, evidence, and the quality of an answer.",
-      paragraphs: [
-        "A useful project begins with a specific question and a small set of documents. Before building a complex pipeline, define what a correct answer should contain and which source passages support it.",
-        "Separate retrieval evaluation from answer evaluation. A fluent answer can still cite the wrong evidence. A project write-up should describe the dataset, evaluation criteria, failure cases, and next steps.",
-        "This is a sample note for the website framework, not a published research result.",
-      ],
-    },
-    {
-      id: "risk-assumptions",
-      title: "Start a risk model with its assumptions",
-      category: "Finance & statistics",
-      summary:
-        "An outline for moving from a financial question to a mathematical model.",
-      paragraphs: [
-        "First identify the quantity to model, the observation period, and the available data. Distinguish assumptions from quantities estimated using observations.",
-        "A clear write-up connects the financial question to the model, explains the meaning of the output, and identifies situations in which the assumptions may fail.",
-        "This is a sample note for the website framework, not investment advice or a published research result.",
-      ],
-    },
-  ],
+  
+    posts: [
+  {
+    id: "llm-temperature",
+    title: "LLM temperature：from statistical physics to AI",
+    summary: "still under construction",
+  },
+],
+  
 miscellany: [
   {
     title: " Chinese Cuisine",
